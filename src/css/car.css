@@ -1,0 +1,12 @@
+#search{
+    width: 329px;
+    height: 32px;
+}
+#search #txt{
+    width: 270px;
+    height: 32px;
+}
+#search #btn{
+    width: 50px;
+    height: 32px;
+}

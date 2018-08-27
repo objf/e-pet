@@ -1,0 +1,212 @@
+
+#header .container{
+    width: 1100px;
+    height: 121px;
+    background:#fff;
+    padding:30px 0px;
+}
+#header .top{
+
+    height: 60px;
+}
+#header .top .top-l>a{
+    display: block;
+    width: 127px;
+    height: 60px;
+}
+#header .top .top-r{
+    margin-right: 29px;
+    margin-top: 20px;
+}
+#header .top .top-r>a{
+    font-size: 14px;
+    color:#666;
+    text-decoration: none;
+}
+#header .top .top-r>a:hover{
+    color:#248DCC;
+}
+
+#main{
+    background:url(../img/big.jpg) no-repeat;
+}
+#main .container{
+    height: 628px;
+    padding:0;
+    position:relative;
+}
+#main .form{
+    position: absolute;
+    width: 368px;
+    background:#fff;
+    top:113px;
+    right:0;
+    padding:0 35px 32px 36px;
+}
+#main .form  .form-t{
+    width: 297px;
+    line-height: 68px;
+    border-bottom: 1px solid #DDD;
+} 
+
+#main .form  .form-t>span{
+    width: 145px;
+    display:inline-block;
+    text-align: center;
+    cursor: pointer;
+    color:#999;
+}
+.ac{
+    border-bottom: 1px solid #33CB98;
+    color:red;
+}
+
+#main .form .put{
+  /*  display:none;*/
+    height: 100%;
+}
+
+#main .form  .form-c{
+     position:relative;
+  /*  height: 201px;*/
+}
+#main .form  .form-c>input{
+    height: 47px;
+    border:1px solid #DDD;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 44px;
+    color: #757575;
+}
+#main .form  .form-c>i{
+    display:block;
+    width: 23px;
+    height: 19px;
+    position:absolute;
+
+}
+#main .form  .form-c>i.i1{
+    background:url(../img/ico.png) no-repeat;
+    top:37px;
+    left:15px;
+}
+#main .form  .form-c>i.i2{
+    background:url(../img/ico.png) no-repeat 0 -26px;
+    top:101px;
+    left:15px;
+}
+#main .form  .form-c>i.i3{
+    background:url(../img/login_ico.png) no-repeat 0 -11px;
+    top:170px;
+    left:15px;
+}
+#main .form  .form-b{
+    height: 58px;
+    width: 100%;
+   /* padding:23px 0 21px 0;*/
+   line-height: 58px;
+   font-size: 14px;
+   color:#666;
+}
+#main .form  .form-b>a{
+    color:#666;
+}
+#main .form  .form-b>a:hover{
+    color:#248DCC;
+}
+#main .form  .form-b>input{
+    height: 13px;
+    width: 13px;
+    background:#DEDEDE;
+}
+#main .form  .form-b input{
+    margin:0;
+}
+#main .form .btn{
+    height: 50px;
+    width: 100%;
+    background:#33CB98;
+    color:#fff;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#main .form .p1{
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    color:#999;
+}
+
+#main .form .tub{
+    height: 20px;
+}
+#main .form .tub>a{
+    display:inline-block;
+    width: 23px;
+    height: 19px;
+    margin-right: 10px;
+    background:url(../img/ico.png) no-repeat;
+}
+#main .form .tub .wx{
+    background-position: 0 -144px;
+}
+#main .form .tub .qq{
+    background-position: 0 -86px;
+}
+#main .form .tub .zfb{
+    background-position: 0 -170px;
+}
+#main .form .phone{
+    height: 100%;
+    display:none;
+}
+
+
+#main .form .phone .ma{
+    width: 195px;
+   
+}
+#main .form .phone .cc .php{
+    display:inline-block;
+    height: 47px;
+    border:1px solid #000;
+    width: 100px;
+    position: absolute;
+    top:87px;right:0;
+    line-height:47px;
+    text-align: center;
+     border-radius: 5px;
+}
+#main .form .phone .cc .pm>img{
+     margin-top: -6px;
+}
+#main .form .phone .cc .ph{
+    top:154px;
+    font-size: 12px;
+    color:#999;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: #33cb98;
+}
+#main .form .phone .cc .ph:hover{
+    background:#33cb98;
+    color:#fff;
+}
+
+#foote .container{
+    height: 177px;
+   padding:63px 0 55px 0;
+}
+#foote .b{
+    height:60px;
+    text-align: center;
+    color: #999;
+}
+#foote .b>a{
+    color:#999;
+}
+#foote .b P{
+    color:#999;
+}

@@ -1,0 +1,307 @@
+/*(1)清除默认样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,input{ margin:0; padding:0; }
+fieldset, img,input,button { border:0 none; padding:0;margin:0;outline-style:none; }   /*去掉input等聚焦时的蓝色边框*/
+ul,li,ol{ list-style:none; }
+select, input { vertical-align:middle;}
+textarea { resize:none; } /*防止拖动*/
+img {border:0; vertical-align:middle; }  
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table { border-collapse:collapse; }
+a {text-decoration:none; }
+*{box-sizing:border-box;}
+*a:hover{text-decoration: none;}
+
+
+/*2.添加公共样式*/
+/*body {
+    font:12px Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff;
+}*/
+/*清除浮动（不管）*/
+.clearfix:after{
+    content:"";
+    display:block;
+    height:0;
+    overflow:hidden;
+    clear:both;
+    visibility: hidden;
+    zoom:1;
+}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:1em;}  /*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,i,em{font-style:normal;text-decoration:none;}
+.valign{text-align: center;}
+.valign:after{content:"";display: inline-block;vertical-align: middle;height:100px;width:0;}
+.valign img{vertical-align: middle;}
+
+
+/*公共类*/
+.container {  /*内容、版心 提取 */
+    width: 1200px;
+    margin:0 auto;
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.ac {
+    text-align:center;
+}
+.hide {
+    display:none;
+}
+.f12{ font-size: 12px;}
+.f14{ font-size: 14px;}
+.f16{ font-size: 16px;}
+
+
+
+
+
+/*头部*/
+#top{
+    height: 29px;
+    border-bottom: 1px solid #DDD;
+    background: #f5f5f5;
+}
+#top .container{
+   
+
+}
+#top .top-l p{
+    padding:0 5px;
+    float:left;
+}
+
+
+#top .top-l p a{
+   
+  
+   height: 28px;
+   display: inline-block;
+   line-height: 28px;
+   color:#444;
+}
+.evl{
+    background:url(../img/epetbrand.png) no-repeat 0 8px;
+     text-indent: 16px;
+}
+.evl2{
+    background:url(../img/bg.png) no-repeat -9px -425px;
+    text-indent: 19px;
+}
+#top .top-l p a>span{
+    color:#f60;
+}
+#top .top-l p a:hover{
+    color:#248DCC;
+}
+#top .top-l p a.evl2:hover{
+    color:#ff8500;
+    text-decoration: none;
+}
+#top .top-l>div.send{
+    float:left;
+    line-height: 28px;
+}
+#top .top-l>div.city{
+    float:left;
+    line-height: 28px;
+    padding:0 20px 0 5px;
+    position: relative;
+}
+#top .top-l>div.city>b{
+    background: url(../img/xqico.png) no-repeat 0 0;
+    display: block;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+}
+#top .top-r li{
+    float: left;
+    padding: 0 5px;
+    height: 28px;
+    border:1px solid #f5f5f5;
+    border-bottom: 0;
+    line-height: 28px;
+    position: relative;
+}
+#top .top-r li em{
+    color: red;
+}
+#top .top-r li a.red{
+    color:red;
+}
+#top .top-r li .tog{
+    position: relative;
+    padding-right: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+#top .top-r li i{
+    width: 13px;
+    height: 13px;
+    background-position: -312px -46px;
+    background-repeat: no-repeat;
+    margin-top: 8px;
+    margin-right: 5px;
+    float: left;
+    background: url(../img/bg.png) no-repeat;
+}
+#top .top-r li.car i{
+    background-position: -291px -46px;
+    width: 14px;
+    height: 14px;
+}
+#top .top-r li p.tog i{
+    background-position: -312px -46px;
+}
+#top .top-r li.sc i{
+    background-position: -353px -46px;
+    width: 15px;
+    height: 14px;
+}
+#top .top-r li.phone i{
+    background-position: -334px -46px;
+    width: 13px;
+    height: 13px;
+}
+#top .top-r li .tog b{
+    display: block;
+    width: 0;
+    height: 0;
+    border: transparent solid 4px;
+    border-top: #717171 solid 4px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    overflow: hidden;
+}
+#top .top-r li.phone img{
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    top:26px;
+    display:none;
+}
+#top .top-r li a:hover{
+    color:#248DCC;
+    text-decoration: none;
+}
+    #top .top-r li a:hover .ec{
+        display:block;
+    
+}
+.ds{
+    display:bloxk;
+}
+#top .top-r li .ec{
+    padding:10px 0 10px 12px;
+    width: 102px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    position: absolute;
+    left: -1px;
+    top: 26px;
+    box-shadow: 3px 3px 4px #777;
+    display: none;
+    z-index: 100;
+}
+#top .top-r li .ec>a{
+    display:block;
+    line-height: 18px;
+    background:url(../img/bg2.png) no-repeat 0 -260px;
+    padding-left: 10px;
+    color:#444;
+}
+/*========================================*/
+#top-b{
+    height: 110px;
+    margin-bottom: 10px;
+    
+}
+#top-b .container{
+    height:110px;
+}
+#top-b .cz{
+    height: 110px;
+    margin-bottom: 10px;
+}
+#top-b .cz h1 a{
+    display:block;
+    width: 230px;
+    height: 110px;
+    background: url(../img/logo.png) no-repeat 43px 16px;
+}
+#top-b .cz .search{
+    margin:33px 0 0 71px;
+}
+#top-b .cz .search .txt{
+     border:2px solid #459D36;
+     height: 34px;
+     width: 404px;
+     border-right: 0;
+     display:block;
+     float:left;
+     padding-left: 17px;
+     color:#999;
+ }
+  
+#top-b .cz .search .btn{
+    width: 75px;
+    background: #459D36 ;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    color:#fff;
+    display:block;
+    float:left;
+   
+}
+#top-b .cz .search p{
+    height: 43px;
+    line-height: 43px;
+    font-size: 12px;
+    color:#999;
+}
+#top-b .cz .search p a{
+    padding:0 12px;
+    font-size: 12px;
+    color: #999;
+}
+#top-b .cz .search p a:hover{
+    color:#333;
+}
+#top-b .cz .search p a.one{
+    padding-left: 0;
+    color:#FF0000;
+}
+
+#top-b .cz .phone{
+    width: 150px;
+    height: 34px;
+    background: url(../img/phone.png) no-repeat;
+    margin:33px 0 0 56px;
+}
+#top-b .cz .car-r{
+    width: 130px;
+    height: 39px;
+    background: url(../img/cart.gif) no-repeat;
+    margin-top: 33px;
+    text-align: center;
+    line-height: 33px;
+    padding-left: 50px;
+}
+#top-b .cz .car-r a{
+    color:#666;
+    font-size: 12px;
+
+}
+#top-b .cz .car-r span{
+    color:#FF4400;
+}
+/*end头部*/

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登录中心</title>
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../css/login.css">
+      <script>
+          document.addEventListener('DOMContentLoaded',()=>{
+            var de = document.getElementById('de');
+            var sj = document.getElementById('sj');
+            var put = document.getElementsByClassName('put')[0];
+            var phone =document.getElementsByClassName('phone')[0];
+            var btn = document.querySelector('.btn');
+            let status = [200,304];
+
+            console.log(phone)
+            de.onclick = function(){
+                put.style.display = 'block';
+                de.classList.add('ac');
+                sj.classList.remove('ac');
+                phone.style.display = 'none';
+            }
+             sj.onclick = function(){
+                sj.classList.add('ac');
+                de.classList.remove('ac');
+                put.style.display = 'none';
+                phone.style.display = 'block';
+            }
+      let username = document.querySelector('#username');
+
+      username.onblur = ()=>{
+        // 先获取输入的用户名
+        let _username = username.value;
+
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState ===4){
+            
+            if(xhr.responseText === 'yes'){
+               console.log(1224)
+            }else if(xhr.responseText === 'no'){
+           
+              // username.innerText = '用户名已存在';
+            }
+          }
+        }
+        xhr.open('get','../api/check_name.php?username='+_username);
+        xhr.send();
+      }
+    })
+      </script>
+    </head>
+    <body>
+      <div id="header">
+          <div class="container">
+              <div class="top clearfix">
+                  <div class="top-l fl">
+                      <a href="#"><img src="../img/cart-logo.png"></a>
+                  </div>
+                  <div class="top-r fr">
+                      <a href="#">品牌特卖</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                      <a href="#">使用中心</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="main">
+          <div class="container">
+              <form class="form">
+                  <div class="form-t">
+                      <span class="ac" id="de">普通登录</span>
+                      <span id="sj">手机动态密码登录</span>
+                  </div>
+                  <div class="put">
+                      <div class="form-c">
+                         <i class="i1"></i> <input type="text" placeholder="手机号/邮箱号/用户名" id="username">
+                         <i class="i2"></i>  <input type="text" placeholder="密码" id="password">
+                      </div>
+                      <div class="form-b">
+                          <input type="checkbox"><span>自动登录</span>
+                          <a href="#" class="fr">忘记密码?</a>
+                      </div>
+                      <button class="btn">登&nbsp;&nbsp;录</button>
+                      <p class="p1">
+                          <span>合作网站登录</span>
+                          <span class="fr">注册帐号</span>
+                      </p>
+                      <div class="tub">
+                           <a href="#" class="wx"></a>
+                           <a href="#" class="qq"></a>
+                           <a href="#" class="zfb"></a>
+                      </div>
+                  </div>
+                  <div class="phone">
+                      <div class="form-c cc">
+                         <i class="i1"></i> <input type="text" placeholder="已注册的手机号">
+                         <i class="i2"></i> <input type="text" placeholder="密码" class="ma"><div class="php pm"><img src="../img/seccode.png"></div>
+                         <i class="i3"></i> <input type="text" placeholder="动态码" class="ma"><div class="php ph"><span>获取动态密码</span></div>
+                      </div>
+                      <div class="form-b">
+                          <input type="checkbox"><span>自动登录</span>
+                          <a href="#" class="fr">忘记密码?</a>
+                      </div>
+                      <button class="btn">登&nbsp;&nbsp;录</button>
+                      <p class="p1">
+                          <span>合作网站登录</span>
+                          <span class="fr">注册帐号</span>
+                      </p>
+                      <div class="tub">
+                           <a href="#" class="wx"></a>
+                           <a href="#" class="qq"></a>
+                           <a href="#" class="zfb"></a>
+                      </div>
+                  </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+      <div id="foote">
+          <div class="container">
+              <div class="b">
+                  <a href="#" >E宠商城  |</a>
+                  <a href="#" >知识  |</a>
+                  <a href="#" >关于我们  |</a>
+                  <a href="#" >联系我们</a>
+                  <p>
+                      渝ICP备13005525号-2 &nbsp; 渝ICP备 10002905 &nbsp;增值电信业务经营许可证：渝B2-20140042 &nbsp; Copyright © 2007-2016 epet.com &nbsp;重庆易宠科技有限公司
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>新用户注册</title>
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../css/login.css">
+      <link rel="stylesheet" href="../css/reg.css">
+      <script>
+          document.addEventListener('DOMContentLoaded',function(){ 
+               var btnCheck = document.getElementById('btnCheck');
+              var phone = document.getElementById('phone');
+
+               btnCheck.onclick = function(){ 
+                  console.log(btnCheck)
+                 
+       
+               var phone = document.getElementById('phone').value;console.log(phone)
+               var ph1 = document.querySelector('.ph1');
+                if(!/^1[3-9]\d{9}$/.test(phone)){
+                    ph1.style.display = 'inline-block';
+                    return false;
+                  }
+
+                   var username = document.getElementById('username').value;console.log(username)
+                 var name = document.querySelector('.name');
+                if(!/^[a-z][\w\-]{4,19}$/.test(username)){console.log(username)
+                    name.style.display = 'inline-block';
+                    return false;
+                }
+
+                 var password = document.getElementById('password').value;console.log(password)
+                 var word = document.querySelector('.word');
+                if(!/^\S{8,20}$/.test(password)){
+                    word.style.display = 'inline-block';
+                    return false;
+                 }
+                var confirm_pwd = document.getElementById('confirm_pwd').value;
+                if(confirm_pwd != password){
+                    que.style.display = 'inline-block';
+                    return false;
+                }
+                var box = document.getElementById('box');
+                if(!box.checked){
+                    return false;
+                }
+                  
+                // window.location.href='https://www.baidu.com'
+                // alert('注册成功')
+
+                // 获取用户名/密码
+             
+                let status =[200,304];
+                let xhr = new XMLHttpRequest();
+                xhr.onload = ()=>{
+                  if(status.indexOf(xhr.status) >= 0){
+                    console.log(xhr.responseText);
+                  }
+                }
+                xhr.open('post','../api/reg.php',true);
+
+                // 设置请求头，以便后端接收post数据
+                xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+
+                xhr.send(`username=${username}&password=${password}&phone=${phone}`);
+
+                return false;
+
+
+              }
+
+          })
+      </script>
+     
+    </head>
+    <body>
+      <div id="header" class="header">
+          <div class="container">
+              <div class="top clearfix">
+                  <div class="top-l fl">
+                      <a href="#"><img src="../img/cart-logo.png"></a>
+                  </div>
+                  <div class="top-r fr">
+                     <span class="f14">已有帐号？&nbsp;&nbsp;</span>
+                      <a href="login.html">登录</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="regs">
+          <div class="container">
+              <form class="form">
+                  <div>
+                      <lable for="#">手机号：</lable>
+                      <input type="text" placeholder="请输入手机号码" id="phone">
+                      <span class="roto ph1">请输入11位电话号码</span>
+                  </div>
+                  <div>
+                       <lable for="#">验证码：</lable>
+                       <input type="text"  placeholder="请输入图片内容" class="two">
+                       <div class="hy">
+                           <i></i>
+                           <a href="#">
+                           <img src="../img/renfren_03.jpg"> 换一换</a>
+                       </div>
+                        <span class="roto">请输入4位验证码</span>
+                  </div>
+                  <div>
+                       <lable for="#">短信验证码：</lable>
+                       <input type="text"  placeholder="验证码" class="dx">
+                       <a href="#" class="dxm">获取验证码</a>
+                       <span class="roto">请输入短信验证码</span>
+                  </div>
+                  <div>
+                       <lable for="#">用户名：</lable>
+                       <input type="text"  placeholder="用户名" id="username">
+                        <span class="roto name">请输入4-20位用户名</span>
+                  </div>
+                  <div>
+                      <lable for="#">密码：</lable>
+                      <input type="text"  placeholder="密码（8-20位，区分大小写）" id="password">
+                      <span class="roto word">请输入8-20位密码</span>
+                  </div>
+                  <div>
+                      <lable for="#">确认密码：</lable>
+                       <input type="text"  placeholder="确认密码" id="confirm_pwd">
+                        <span class="roto que">请输入确认密码</span>
+                  </div>
+                  <p>
+                      <input type="checkbox" id="box"> 我已阅读并接受E宠
+                      <a href="#">《用户使用协议》</a>
+                  </p>
+                  <button id="btnCheck">立即注册</button>
+              </form>
+          </div>
+      </div>
+     
+      <div id="foote">
+          <div class="container">
+              <div class="b">
+                  <a href="#" >E宠商城  |</a>
+                  <a href="#" >知识  |</a>
+                  <a href="#" >关于我们  |</a>
+                  <a href="#" >联系我们</a>
+                  <p>
+                      渝ICP备13005525号-2 &nbsp; 渝ICP备 10002905 &nbsp;增值电信业务经营许可证：渝B2-20140042 &nbsp; Copyright © 2007-2016 epet.com &nbsp;重庆易宠科技有限公司
+                  </p>
+              </div>
+          </div>
+      </div>
+    </body>
+</html>
